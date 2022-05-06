@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image:linear-gradient(-10deg, #7028e4 0%, #e5b2ca 100%); 
+	width: 100vw;
+	height: 100vh;
+}
+svg.like {
+	position: fixed;
+	top:calc(50vh - 160px);
+	left:calc(50vw -  160px);
+}
+svg.like {
+	border-radius: 100%;
+	background-color: #212121;
+	cursor: pointer;
+	transform: scale(0.3);
+}
+.liked svg.like {
+	animation:  blink 1s forwards;
+}
+.liked svg.like path {
+	fill:#fff;
+}
+@keyframes blink{
+	10%{
+		transform: scale(.42);
+		background-color: #8815b7;
+		box-shadow: 0 0 250px #f1e794;
+	}
+	100% {
+		background-color: #e01f4f;
+		box-shadow: 0 0 250px #FFEB3B
+	}
+}

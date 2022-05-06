@@ -1,16 +1,18 @@
 <template>
   <div class="homepage-hero-module">
     <div class="video-container">
-      <video :style="fixStyle" muted autoplay loop class="fillWidth" src="../assets/loginBG.mp4">
+      <!-- <video :style="fixStyle" muted autoplay loop class="fillWidth" src="../assets/loginBG.mp4">
         浏览器不支持 video 标签，建议升级浏览器。
-      </video>
+      </video> -->
+      <img src="../assets/loginBG.jpg" alt="背景" style="width:100%;">
+      <div>
+        <!-- <svg height="320" width="320" class="like"> -->
+        <svg height="320" width="320" class="like" onclick="document.body.classList.toggle('liked')">
+          <path class="path" d="M 160 145 c 15 -90 170 -20 0 90 m 0 -90 c -15 -90 -170 -20 0 90" fill="gray"/>
+        </svg>
+      </div>
     </div>
   </div>
-    <!-- <el-container>
-      <el-header>Header</el-header>
-      <el-main>Main</el-main>
-      <el-footer>Footer</el-footer>
-    </el-container> -->
 </template>
 
 <script>
@@ -18,40 +20,20 @@ export default {
   name: 'login',
   data () {
     return {
+      account: '',
+      password: '',
       fixStyle: ''
     }
   },
   mounted () {
-    window.onresize = () => {
-      const windowWidth = document.body.clientWidth
-      const windowHeight = document.body.clientHeight
-      const windowAspectRatio = windowHeight / windowWidth
-      let videoWidth
-      let videoHeight
-      if (windowAspectRatio < 0.5625) {
-        videoWidth = windowWidth
-        videoHeight = videoWidth * 0.5625
-        this.fixStyle = {
-          height: windowWidth * 0.5625 + 'px',
-          width: windowWidth + 'px',
-          'margin-bottom': (windowHeight - videoHeight) / 2 + 'px',
-          'margin-left': 'initial'
-        }
-      } else {
-        videoHeight = windowHeight
-        videoWidth = videoHeight / 0.5625
-        this.fixStyle = {
-          height: windowHeight + 'px',
-          width: windowHeight / 0.5625 + 'px',
-          'margin-left': (windowWidth - videoWidth) / 2 + 'px',
-          'margin-bottom': 'initial'
-        }
-      }
-    }
-    window.onresize()
+
   },
   methods: {
-
+    goIndex () {
+      this.$router.push({
+        name: 'index'
+      })
+    }
   }
 }
 </script>
@@ -88,5 +70,15 @@ export default {
     z-index: 1;
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
+  }
+  .form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
   }
 </style>

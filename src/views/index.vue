@@ -1,8 +1,8 @@
 <template>
   <div>
-    <audio src="static/music/PG.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
+    <audio src="./static/music/PG.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
   <header >
-    <div class="wrap-header" style="background-image: url('static/loginBG.jpg')">
+    <div class="wrap-header" style="background-image: url('./static/loginBG.jpg')">
       <div class="main-header">
         <div class="zerogrid">
           <h1>Batherine</h1>

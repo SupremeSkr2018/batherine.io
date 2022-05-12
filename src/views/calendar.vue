@@ -1,6 +1,6 @@
 <template>
   <div>
-    <audio src="static/music/doushini.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
+    <audio src="./static/music/doushini.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
     <canvas id="canvas"></canvas>
     <div v-if="day == '5.20'">
       <div class="A">

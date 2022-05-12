@@ -157,16 +157,16 @@ export default {
     function rand(min, max) {
       return Math.floor(Math.random() * (max - min + 1) + min);
     }
-    var ctx = canvas.getContext('2d');
-    var X = canvas.width = window.innerWidth;
-    var Y = canvas.height = window.innerHeight;
-    var mouseX = null;
-    var mouseY = null;
-    var bubbles = [];
-    var bubbleNum = 150;
-    var shapes = [];
-    var rad = Math.PI * 2 / 4;
-    var style = {
+    let ctx = canvas.getContext('2d');
+    let X = canvas.width = window.innerWidth;
+    let Y = canvas.height = window.innerHeight;
+    let mouseX = null;
+    let mouseY = null;
+    let bubbles = [];
+    let bubbleNum = 150;
+    let shapes = [];
+    let rad = Math.PI * 2 / 4;
+    let style = {
       black: 'black',
       white: 'white',
       lineWidth: 4,
@@ -202,7 +202,7 @@ export default {
       this.as = rand(0, 360) * Math.PI / 180;
     };
     Bubble.prototype.draw = function() {
-      var ctx  = this.ctx;
+      let ctx  = this.ctx;
       ctx.save();
       ctx.fillStyle = 'white';
       ctx.strokeStyle = 'white';
@@ -244,8 +244,8 @@ export default {
       this.wrapPosition();
       this.draw();
     };
-    for (var i = 0; i < bubbleNum; i++) {
-      var b = new Bubble(ctx, rand(0, X), rand(0, Y / 2));
+    for (let i = 0; i < bubbleNum; i++) {
+      let b = new Bubble(ctx, rand(0, X), rand(0, Y / 2));
       bubbles.push(b);
     }
     function Shape(ctx, x, y) {
@@ -264,7 +264,7 @@ export default {
       this.rad1 = this.a1 * Math.PI / 180;
     };
     Shape.prototype.draw = function() {
-      var ctx  = this.ctx;
+      let ctx  = this.ctx;
       ctx.save();
       ctx.fillStyle = 'hsl(' + this.c + ', 100%, 80%)';
       ctx.strokeStyle = 'hsl(' + this.c + ', 80%, 60%)';
@@ -282,13 +282,13 @@ export default {
       ctx.translate(-this.x, -this.y);
       ctx.fillRect(this.x - this.r, this.y - this.r, this.r * 2, this.r * 2);
       ctx.fillStyle = 'hsl(' + this.c + ', 80%, 60%)';
-      for (var j = 0; j < 4; j++) {
+      for (let j = 0; j < 4; j++) {
         ctx.translate(this.x, this.y);
         ctx.rotate(90 * Math.PI / 180);
         ctx.translate(-this.x, -this.y);
         ctx.beginPath();
         ctx.moveTo(Math.cos(rad * 0) * this.r + this.x, Math.sin(rad * 0) * this.r + this.y + this.r);
-        for (var i = 1; i < 4; i++) {
+        for (let i = 1; i < 4; i++) {
           if (i !== 2) {
             ctx.lineTo(Math.cos(rad * i) * this.r + this.x, Math.sin(rad * i) * this.r + this.y + this.r);
           }
@@ -306,17 +306,17 @@ export default {
       this.updateParams();
       this.draw();
     };
-    for (var i = 0; i < X;) {
-      var dist = rand(1, 50);
-      var s = new Shape(ctx, i += dist, rand(Y - Y / 3, Y - Y / 6));
+    for (let i = 0; i < X;) {
+      let dist = rand(1, 50);
+      let s = new Shape(ctx, i += dist, rand(Y - Y / 3, Y - Y / 6));
       shapes.push(s);
     }
     function render() {
       ctx.clearRect(0, 0, X, Y);
-      for (var i = 0; i < shapes.length; i++) {
+      for (let i = 0; i < shapes.length; i++) {
         shapes[i].render(i);
       }
-      for (var i = 0; i < bubbles.length; i++) {
+      for (let i = 0; i < bubbles.length; i++) {
         bubbles[i].render(i);
       }
       requestAnimationFrame(render);
@@ -332,13 +332,13 @@ export default {
       }
       shapes = [];
       bubbles = [];
-      for (var i = 0; i < X;) {
-        var dist = rand(1, 50);
-        var s = new Shape(ctx, i += dist, rand(Y - Y / 3, Y - Y / 6));
+      for (let i = 0; i < X;) {
+        let dist = rand(1, 50);
+        let s = new Shape(ctx, i += dist, rand(Y - Y / 3, Y - Y / 6));
         shapes.push(s);
       }
-      for (var i = 0; i < bubbleNum; i++) {
-        var b = new Bubble(ctx, rand(0, X), rand(0, Y / 2));
+      for (let i = 0; i < bubbleNum; i++) {
+        let b = new Bubble(ctx, rand(0, X), rand(0, Y / 2));
         bubbles.push(b);
       }
     }
@@ -348,9 +348,9 @@ export default {
     canvas.addEventListener('click', function(e) {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      var num = rand(1, 20);
-      for (var i = 0; i < num; i++) {
-        var b = new Bubble(ctx, rand(mouseX - 100, mouseX + 100), rand(mouseY - 100, mouseY + 100));
+      let num = rand(1, 20);
+      for (let i = 0; i < num; i++) {
+        let b = new Bubble(ctx, rand(mouseX - 100, mouseX + 100), rand(mouseY - 100, mouseY + 100));
         bubbles.push(b);
       }
     }, false)

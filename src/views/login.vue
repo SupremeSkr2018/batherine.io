@@ -4,13 +4,10 @@
       <!-- <video :style="fixStyle" muted autoplay loop class="fillWidth" src="../assets/loginBG.mp4">
         浏览器不支持 video 标签，建议升级浏览器。
       </video> -->
-      <img src="../assets/loginBG.jpg" alt="背景" style="width:100%;">
-      <div>
-        <!-- <svg height="320" width="320" class="like"> -->
-        <svg height="320" width="320" class="like" onclick="document.body.classList.toggle('liked')">
+      <svg height="320" width="320" id="aixin" class="like" @click="document.getElementById('#aixin').toggle('liked')">
           <path class="path" d="M 160 145 c 15 -90 170 -20 0 90 m 0 -90 c -15 -90 -170 -20 0 90" fill="gray"/>
         </svg>
-      </div>
+      <img src="../assets/loginBG.jpg" alt="背景" style="width:100%;">
     </div>
   </div>
 </template>
@@ -39,6 +36,11 @@ export default {
 </script>
 
 <style>
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .el-header, .el-footer {
   background-color: #B3C0D1;
   color: #333;

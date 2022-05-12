@@ -1,8 +1,8 @@
 <template>
   <div>
-    <audio src="/static/music/PG.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
+    <audio src="static/music/PG.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
   <header >
-    <div class="wrap-header">
+    <div class="wrap-header" style="background-image: url('static/loginBG.jpg')">
       <div class="main-header">
         <div class="zerogrid">
           <h1>Batherine</h1>
@@ -45,7 +45,7 @@
           <div class="row wrap-box" style="display: flex; justify-content: center;">
             <div class="box1">
               <div class="item1">
-                <img src="@/assets/images/pic11.jpg">
+                <img src="static/images/pic11.jpg">
                 <p></p>
               </div>
               <div class="text1">
@@ -53,7 +53,7 @@
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在一起：<span @click="goCalendar('6.1')">2021.6.1</span></p>
               </div>
               <div class="item1">
-                <img src="@/assets/images/pic12.jpg">
+                <img src="static/images/pic12.jpg">
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@
                         </mask>
                       </defs>
                   </svg> -->
-                    <img src="@/assets/images/pic11.jpg" />
+                    <img src="static/images/pic11.jpg" />
                 </div>
                 <div class="mt-4">
                     <h5 class="mb-0">雷䨻䨻</h5>
@@ -99,9 +99,9 @@
                               l368.4115-214.6845c127.2958-74.1792,172.7084-240.1479,98.7059-367.5465C818.4728,161.3996,655.4992,118.375,528.4855,192.3897z" />
                         </mask>
                         </defs>
-                      <img mask="url(#mask-middle-2)" width="607" height="532" xlink:href="@/assets/images/pic12.jpg"></img>
+                      <img mask="url(#mask-middle-2)" width="607" height="532" xlink:href="static/images/pic12.jpg"></img>
                     </svg> -->
-                    <img src="@/assets/images/pic12.jpg" />
+                    <img src="static/images/pic12.jpg" />
                 </div>
                 <div class="mt-4">
                     <h5 class="mb-0">小猪丹宁</h5>
@@ -196,7 +196,7 @@
               <div class="col-1-3">
                 <div class="wrap-col item">
                   <div class="zoom-container">
-                    <img src="@/assets/images/pic6.jpg" />
+                    <img src="static/images/pic6.jpg" />
                   </div>
                   <div class="item-content">
                     <p>做一对属于我们的手机壳</p>
@@ -206,7 +206,7 @@
               <div class="col-1-3">
                 <div class="wrap-col item">
                   <div class="zoom-container">
-                    <img src="@/assets/images/pic7.jpg" />
+                    <img src="static/images/pic7.jpg" />
                   </div>
                   <div class="item-content">
                     <p>陪你做所有你想做的事</p>
@@ -216,7 +216,7 @@
               <div class="col-1-3">
                 <div class="wrap-col item">
                   <div class="zoom-container">
-                    <img src="@/assets/images/pic8.jpg" />
+                    <img src="static/images/pic8.jpg" />
                   </div>
                   <div class="item-content">
                     <p>守着夕阳西下，给你讲永远好笑的笑话</p>
@@ -244,7 +244,7 @@
                       <div class="item-caption-inner1"></div>
                     </div>
                   </div>
-                  <img src="@/assets/images/pic1.jpg" />
+                  <img src="static/images/pic1.jpg" />
                 </div>
               </div>
               <div class="col-1-3-2">
@@ -254,7 +254,7 @@
                       <div class="item-caption-inner1"></div>
                     </div>
                   </div>
-                  <img src="@/assets/images/pic2.jpg" />
+                  <img src="static/images/pic2.jpg" />
                 </div>
               </div>
               <div class="col-1-3-2">
@@ -264,7 +264,7 @@
                       <div class="item-caption-inner1"></div>
                     </div>
                   </div>
-                  <img src="@/assets/images/pic5.jpg" />
+                  <img src="static/images/pic5.jpg" />
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@
                       <div class="item-caption-inner1"></div>
                     </div>
                   </div>
-                  <img src="@/assets/images/pic4.jpg" />
+                  <img src="static/images/pic4.jpg" />
                 </div>
               </div>
               <div class="col-1-3-2">
@@ -286,7 +286,7 @@
                       <div class="item-caption-inner1"></div>
                     </div>
                   </div>
-                  <img src="@/assets/images/pic5.jpg" />
+                  <img src="static/images/pic5.jpg" />
                 </div>
               </div>
               <div class="col-1-3-2">
@@ -296,7 +296,7 @@
                       <div class="item-caption-inner1"></div>
                     </div>
                   </div>
-                  <img src="@/assets/images/pic2.jpg" />
+                  <img src="static/images/pic2.jpg" />
                 </div>
               </div>
             </div>

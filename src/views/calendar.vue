@@ -1,11 +1,11 @@
 <template>
   <div>
-    <audio src="/static/music/doushini.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
+    <audio src="static/music/doushini.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
     <canvas id="canvas"></canvas>
     <div v-if="day == '5.20'">
       <div class="A">
-        <img src="../assets/images/pic13.jpg" alt="">
-        <img src="../assets/images/pic14.jpg" alt="">
+        <img src="static/images/pic13.jpg" alt="">
+        <img src="static/images/pic14.jpg" alt="">
       </div>
       <div style="position: absolute;top: 155px;right: 550px;z-index: 999;color: #ff6f00;">
         <p style="fontSize: 20px;margin-bottom: 10px;">今天第一次见到我的女孩，没有想到后来会那么爱她！</p>
@@ -16,9 +16,9 @@
     
     <div v-else>
       <div class="B">
-        <img src="../assets/images/pic3.jpg" alt="">
-        <img src="../assets/images/pic15.jpg" alt="">
-        <img src="../assets/images/pic16.jpg" alt="">
+        <img src="static/images/pic3.jpg" alt="">
+        <img src="static/images/pic15.jpg" alt="">
+        <img src="static/images/pic16.jpg" alt="">
       </div>
       <div style="position: absolute;top: 155px;right: 550px;z-index: 999;color: #ff6f00;">
         <p style="fontSize: 20px;margin-bottom: 10px;">今天和我最爱的女孩在一起啦！！！</p>
@@ -370,14 +370,6 @@ canvas#canvas {
 display: block;
 background: #ABE7FF;
 }
-body {
-background: #7e9dff;
-font-family: "Roboto", sans-serif;
-display: flex;
-align-items: center;
-height: 100vh;
-}
-
 .main-container {
 background: #ecfffc;
 /* color: #7e9dff; */

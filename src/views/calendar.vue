@@ -598,7 +598,7 @@ left: 1000px;
   z-index: 999;
   color: #ff6f00;
 }
-@media (max-width: 1366px) {
+@media all and (max-width: 1366px) {
   .A img:nth-child(2) {
   transition: ease-in 4s;
   position: absolute;

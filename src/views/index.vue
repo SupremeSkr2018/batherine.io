@@ -297,7 +297,7 @@ export default {
     goCalendar (day) {
       this.$router.push({
         name: 'calendar',
-        params: {
+        query: {
           day
         }
       })

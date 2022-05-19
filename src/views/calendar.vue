@@ -12,9 +12,9 @@
         <img src="static/images/pic13.jpg" alt="">
         <img src="static/images/pic14.jpg" alt="">
       </div>
-      <div style="position: absolute;top: 155px;right: 550px;z-index: 999;color: #ff6f00;">
-        <p style="fontSize: 20px;margin-bottom: 10px;">今天第一次见到我的女孩，没有想到后来会那么爱她！</p>
-        <span style="fontSize: 15px;">因为我不想加班跑去凑热闹<br>你是陪着朋友去帮她追到她的男孩 <br>
+      <div class="tip1">
+        <p style="fontSize: 20px;margin-bottom: 10px;color: #ff6f00;">今天第一次见到我的女孩，没有想到后来会那么爱她！</p>
+        <span style="fontSize: 15px">因为我不想加班跑去凑热闹<br>你是陪着朋友去帮她追到她的男孩 <br>
         机缘巧合的认识了你 <br>我现在很感谢那个主持人把我带到你旁边！</span>
       </div>
     </div>
@@ -25,10 +25,9 @@
         <img src="static/images/pic15.jpg" alt="">
         <img src="static/images/pic16.jpg" alt="">
         <img src="static/images/pic10.jpg" alt="">
-        <img src="static/images/pic17.jpg" alt="">
       </div>
-      <div style="position: absolute;top: 455px;right: 0;z-index: 999;color: #ff6f00;">
-        <p style="fontSize: 20px;margin-bottom: 10px;">今天和我最爱的女孩在一起啦！！！</p>
+      <div class="tip2">
+        <p style="fontSize: 20px;margin-bottom: 10px;color: #ff6f00;">今天和我最爱的女孩在一起啦！！！</p>
         <span style="fontSize: 15px;">我的宝贝每天去接我下班，然后一起在公司园区散步，分享自己最近一些有趣的事……</span>
       </div>
     </div>
@@ -150,7 +149,7 @@ export default {
     }
   },
   created () {
-    this.day = this.$route.params.day
+    this.day = this.$route.query.day
   },
   mounted () {
     this.load()
@@ -537,8 +536,7 @@ background: #7e9dff;
 color: #ecfffc;
 }
 .A img:nth-child(1) {
-height: 300px;
-width: 500px;
+height: 30%;
 transition: ease-in 4s;
 position: absolute;
 top: 50px;
@@ -575,15 +573,66 @@ top: 300px;
 left: 400px;
 }
 .B img:nth-child(4) {
-height: 300px;
-position: absolute;
-top: 600px;
-left: 100px;
+height: 200px !important;
+  position: absolute;
+  top: 50% !important;
+  left: 20px !important;
 }
 .B img:nth-child(5) {
 height: 500px;
 position: absolute;
 top: 300px;
 left: 1000px;
+}
+.tip1{
+  position: absolute;
+  top: 155px;
+  right: 550px;
+  z-index: 999;
+  color: #ff6f00;
+}
+.tip2{
+  position: absolute;
+  top: 455px;
+  right: 0;
+  z-index: 999;
+  color: #ff6f00;
+}
+@media (max-width: 1366px) {
+  .A img:nth-child(2) {
+  transition: ease-in 4s;
+  position: absolute;
+  top: 50px !important;
+  height: 60% !important;
+  left: 39% !important;
+  transform: rotate(15deg);
+}
+.B img:nth-child(1) {
+  height: 200px !important;
+  position: absolute;
+  top: 50px !important;
+  left: 40px !important;
+  transform: rotate(-12deg);
+}
+.B img:nth-child(2) {
+  width: 20% !important;
+  position: absolute;
+  top: 50px !important;
+  left: 33% !important;
+  transform: rotate(15deg);
+}
+.B img:nth-child(3) {
+  width: 25% !important;
+  position: absolute;
+  top: 300px !important;
+  left: 400px !important;
+}
+.tip1{
+  position: absolute;
+  top: 43%;
+  right: 62%;
+  z-index: 999;
+  color: #ff6f00;
+}
 }
 </style>

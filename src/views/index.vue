@@ -1,6 +1,6 @@
 <template>
   <div>
-    <audio src="./static/music/PG.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
+    <audio src="./static/music/youBelongTome.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
   <header >
     <div class="wrap-header" style="background-image: url('./static/loginBG.jpg')">
       <div class="main-header">
@@ -39,7 +39,6 @@
   </header>
   <section id="container">
     <div class="wrap-container">
-      <!-----------------content-box-1-------------------->
       <section class="content-box boxstyle-1 box-1">
         <!-- <div class="zerogrid item1">
           <div class="row wrap-box" style="display: flex; justify-content: center;">
@@ -80,10 +79,10 @@
                         </mask>
                       </defs>
                   </svg> -->
-                    <img src="static/images/pic11.jpg" />
+                    <img src="static/images/pic18.jpg" />
                 </div>
                 <div class="mt-4">
-                    <h5 class="mb-0">雷䨻䨻</h5>
+                    <h5 class="mb-0">李不讲理啊</h5>
                     <!-- <span class="small">Bridesmaid </span> -->
                 </div>
               </div>
@@ -101,10 +100,10 @@
                         </defs>
                       <img mask="url(#mask-middle-2)" width="607" height="532" xlink:href="static/images/pic12.jpg"></img>
                     </svg> -->
-                    <img src="static/images/pic12.jpg" />
+                    <img src="static/images/pic19.jpg" />
                 </div>
                 <div class="mt-4">
-                    <h5 class="mb-0">小猪丹宁</h5>
+                    <h5 class="mb-0">你才不讲理呢</h5>
                     <!-- <span class="small">Groomsman </span> -->
                 </div>
               </div>
@@ -168,6 +167,11 @@
                       <span class="small text-primary">2022-06-01</span>
                     </div>
                 </li>
+                <li>
+                    <div class="story-icon" style="font-size: 25px;">
+                      ······
+                    </div>
+                </li>
               </ol>
           </div>
         </div>
@@ -188,38 +192,18 @@
           <div class="row wrap-box"><!--Start Box-->
             <div class="header">
               <div class="wrapper">
-                <h2 class="color-yellow">Experience together</h2>
+                <h2 class="color-yellow">和你做遍所有浪漫的事</h2>
                 <hr class="line">
               </div>
             </div>
             <div class="row"><!--Start Box-->
-              <div class="col-1-3">
+              <div v-for="item in experienceList" :key="item.img" class="col-1-3">
                 <div class="wrap-col item">
                   <div class="zoom-container">
-                    <img src="static/images/pic6.jpg" />
+                    <img :src="item.img" />
                   </div>
                   <div class="item-content">
-                    <p>做一对属于我们的手机壳</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-1-3">
-                <div class="wrap-col item">
-                  <div class="zoom-container">
-                    <img src="static/images/pic7.jpg" />
-                  </div>
-                  <div class="item-content">
-                    <p>陪你做所有你想做的事</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-1-3">
-                <div class="wrap-col item">
-                  <div class="zoom-container">
-                    <img src="static/images/pic8.jpg" />
-                  </div>
-                  <div class="item-content">
-                    <p>守着夕阳西下，给你讲永远好笑的笑话</p>
+                    <p>{{item.text}}</p>
                   </div>
                 </div>
               </div>
@@ -232,71 +216,31 @@
           <div class="row row2 wrap-box"><!--Start Box-->
             <div class="header">
               <div class="wrapper">
-                <h2 class="color-yellow">ALBUM</h2>
+                <h2 class="color-yellow">相片集</h2>
                 <hr class="line">
               </div>
             </div>
             <div class="row row2">
-              <div class="col-1-3-2">
+              <div class="col-1-3-2" v-for="(src, index) in ALBUM1" :key="index">
                 <div class="item-container">
                   <div class="item-caption">
                     <div class="item-caption-inner">
                       <div class="item-caption-inner1"></div>
                     </div>
                   </div>
-                  <img src="static/images/pic1.jpg" />
-                </div>
-              </div>
-              <div class="col-1-3-2">
-                <div class="item-container">
-                  <div class="item-caption">
-                    <div class="item-caption-inner">
-                      <div class="item-caption-inner1"></div>
-                    </div>
-                  </div>
-                  <img src="static/images/pic2.jpg" />
-                </div>
-              </div>
-              <div class="col-1-3-2">
-                <div class="item-container">
-                  <div class="item-caption">
-                    <div class="item-caption-inner">
-                      <div class="item-caption-inner1"></div>
-                    </div>
-                  </div>
-                  <img src="static/images/pic5.jpg" />
+                  <img :src="src.img" />
                 </div>
               </div>
             </div>
             <div class="row row2">
-              <div class="col-1-3-2">
+              <div class="col-1-3-2" v-for="(src, index) in ALBUM2" :key="index">
                 <div class="item-container">
                   <div class="item-caption">
                     <div class="item-caption-inner">
                       <div class="item-caption-inner1"></div>
                     </div>
                   </div>
-                  <img src="static/images/pic4.jpg" />
-                </div>
-              </div>
-              <div class="col-1-3-2">
-                <div class="item-container">
-                  <div class="item-caption">
-                    <div class="item-caption-inner">
-                      <div class="item-caption-inner1"></div>
-                    </div>
-                  </div>
-                  <img src="static/images/pic5.jpg" />
-                </div>
-              </div>
-              <div class="col-1-3-2">
-                <div class="item-container">
-                  <div class="item-caption">
-                    <div class="item-caption-inner">
-                      <div class="item-caption-inner1"></div>
-                    </div>
-                  </div>
-                  <img src="static/images/pic2.jpg" />
+                  <img :src="src.img" />
                 </div>
               </div>
             </div>
@@ -316,7 +260,22 @@ export default {
       countdownDays: '00',
       countdownHours: '00',
       countdownMinutes: '00',
-      countdownSeconds: '00'
+      countdownSeconds: '00',
+      experienceList: [
+        {text: '做一对属于我们的手机壳', img: 'static/images/pic6.jpg'},
+        {text: '陪你做所有你想做的事', img: 'static/images/pic7.jpg'},
+        {text: '守着夕阳西下，给你讲永远好笑的笑话', img: 'static/images/pic8.jpg'},
+      ],
+      ALBUM1: [
+        {img: 'static/images/pic1.jpg'},
+        {img: 'static/images/pic2.jpg'},
+        {img: 'static/images/pic5.jpg'},
+      ],
+      ALBUM2: [
+        {img: 'static/images/pic4.jpg'},
+        {img: 'static/images/pic5.jpg'},
+        {img: 'static/images/pic2.jpg'},
+      ],
     }
   },
   created () {

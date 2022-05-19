@@ -109,7 +109,11 @@
  .content-box {}
  .content-box .wrap-box {padding:150px 10px; position: relative;background: #F9F7F1;}
  .content-box .header {text-align: center; margin: 20px 0 70px;}
- .content-box .header h2{font-size: 60px;  line-height: 1.2;font-weight: 500;}
+ .content-box .header h2{
+  font-size: 25px;
+  font-weight: 800;
+  margin-top: 15px;
+  }
  .content-box .header .wrapper{padding: 5px; display: inline-block;}
  .content-box .header .intro {color: #FF69B4;font-size: 18px;}
  

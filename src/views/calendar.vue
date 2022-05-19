@@ -1,7 +1,12 @@
 <template>
   <div>
-    <audio src="./static/music/doushini.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
-    <canvas id="canvas"></canvas>
+    <audio v-if="day == '5.20'" src="./static/music/BeautifulGirl.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
+    <audio v-else src="./static/music/perfect.mp3" loop autoplay="autoplay" controls preload="auto" style="position: absolute; left: -400px;"></audio>
+    <canvas v-if="day == '5.20'" id="canvas"></canvas>
+    <!-- <div><img src="https://scpic.chinaz.net/files/pic/pic9/202102/apic30922.jpg" alt=""></div> -->
+    <video v-else muted autoplay loop class="fillWidth" src="static/61bg.mp4" style="width: 100%; height: 100%;">
+        浏览器不支持 video 标签，建议升级浏览器。
+      </video>
     <div v-if="day == '5.20'">
       <div class="A">
         <img src="static/images/pic13.jpg" alt="">
@@ -19,10 +24,12 @@
         <img src="static/images/pic3.jpg" alt="">
         <img src="static/images/pic15.jpg" alt="">
         <img src="static/images/pic16.jpg" alt="">
+        <img src="static/images/pic10.jpg" alt="">
+        <img src="static/images/pic17.jpg" alt="">
       </div>
-      <div style="position: absolute;top: 155px;right: 550px;z-index: 999;color: #ff6f00;">
+      <div style="position: absolute;top: 455px;right: 0;z-index: 999;color: #ff6f00;">
         <p style="fontSize: 20px;margin-bottom: 10px;">今天和我最爱的女孩在一起啦！！！</p>
-        <span style="fontSize: 15px;">我的女孩每天去接我下班，然后一起在公司园区散步，讲着自己的故事</span>
+        <span style="fontSize: 15px;">我的宝贝每天去接我下班，然后一起在公司园区散步，分享自己最近一些有趣的事……</span>
       </div>
     </div>
     <div v-if="day == '5.20'" class="main-container">
@@ -555,16 +562,28 @@ left: 40px;
 transform: rotate(-12deg);
 }
 .B img:nth-child(2) {
-width: 300px;
+width: 20%;
 position: absolute;
 top: 50px;
 left: 600px;
 transform: rotate(15deg);
 }
 .B img:nth-child(3) {
-width: 600px;
+width: 25%;
 position: absolute;
-top: 260px;
+top: 300px;
 left: 400px;
+}
+.B img:nth-child(4) {
+height: 300px;
+position: absolute;
+top: 600px;
+left: 100px;
+}
+.B img:nth-child(5) {
+height: 500px;
+position: absolute;
+top: 300px;
+left: 1000px;
 }
 </style>
